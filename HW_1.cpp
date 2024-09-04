@@ -22,6 +22,43 @@ int main()
     cin.ignore();
 
     if (employeeCount == 0) {
-
+        switch (choice) {
+        case 1:
+            addSong();
+            break;
+        case 2:
+            return 0;
+        default:
+            cout << "Неправильний вибір. Спробуйте ще раз." << endl;
+        }
+    }
+    else {
+        switch (choice) {
+        case 1:
+            addSong();
+            break;
+        case 2:
+            removeSong();
+            break;
+        case 3:
+            editSong();
+            break;
+        case 4:
+            displaySong();
+            break;
+        case 5:
+            saveSongToFile();
+            break;
+        case 6:
+            searchByAuthor();
+            break;
+        case 7:
+            searchByWord();
+            break;
+        case 8:
+            return 0;
+        default:
+            cout << "Неправильний вибір. Спробуйте ще раз." << endl;
+        }
     }
 }

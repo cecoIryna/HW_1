@@ -16,3 +16,26 @@ void displaySmallMenu() {
     cout << "2. Додати співробітника\n";
     cout << "3. Вихід\n";
 }
+
+void addEmployee() {
+    if (employeeCount >= MAX_EMPLOYEE) {
+        cout << "Каталог переповнений, не можна додати більше робітників." << endl;
+        return;
+    }
+
+    cout << "Введіть фамілію: ";
+    cin.ignore();
+    cin.getline(catalog[employeeCount].surname, MAX_SURNAME);
+
+    cout << "Введіть ім'я: ";
+    cin.getline(catalog[employeeCount].name, MAX_NAME);
+
+    cout << "Введіть номер телефону: ";
+    cin.getline(catalog[employeeCount].phoneNumber, MAX_PHONE_NUMBER);
+
+    cout << "Введіть зарплатню: ";
+    cin.getline(catalog[employeeCount].payment, MAX_PAYMENT);
+
+    employeeCount++;
+    cout << "Пісня успішно додана." << endl;
+}

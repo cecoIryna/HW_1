@@ -6,10 +6,10 @@ const int MAX_PHONE_NUMBER = 10;
 const int MAX_PAYMENT = 255;
 
 struct Employee {
-    char* title[MAX_SURNAME];
-    char* author[MAX_NAME];
-    double year[MAX_PHONE_NUMBER];
-    double text[MAX_PAYMENT];
+    char* surname[MAX_SURNAME];
+    char* name[MAX_NAME];
+    double phoneNumber[MAX_PHONE_NUMBER];
+    double payment[MAX_PAYMENT];
 };
 
 Employee catalog[MAX_EMPLOYEE];
