@@ -1,16 +1,24 @@
 #pragma once
-const int MAX_EMPLOYEE = 255;
-const int MAX_SURNAME = 255;
-const int MAX_NAME = 255;
-const int MAX_PHONE_NUMBER = 10;
-const int MAX_PAYMENT = 255;
+const int MAX_EMPLOYEES = 100;
+const int PHONE_LENGTH = 15;
 
 struct Employee {
-    char* surname[MAX_SURNAME];
-    char* name[MAX_NAME];
-    double phoneNumber[MAX_PHONE_NUMBER];
-    double payment[MAX_PAYMENT];
+    char* surname;
+    char* name;
+    char phone[PHONE_LENGTH];
+    double salary;
 };
 
-Employee catalog[MAX_EMPLOYEE];
-int employeeCount = 0;
+Employee employees[MAX_EMPLOYEES];
+int employeeCount=0;
+
+// Функции
+void loadEmployeesFromFile();
+void saveEmployeesToFile();
+void showAllEmployees();
+void searchEmployeeBySurname();
+void searchEmployeesBySalaryRange();
+void sortEmployeesBySurname();
+void addEmployee();
+void deleteEmployee();
+bool isPhoneValid(const char* phone);
